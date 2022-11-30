@@ -39,7 +39,7 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
- ADC_HandleTypeDef hadc;
+ADC_HandleTypeDef hadc;
 
 /* USER CODE BEGIN PV */
 
@@ -201,7 +201,7 @@ static void MX_ADC_Init(void)
   AnalogWDGConfig.Channel = ADC_CHANNEL_0;
   AnalogWDGConfig.ITMode = DISABLE;
   AnalogWDGConfig.HighThreshold = 200;
-  AnalogWDGConfig.LowThreshold = 0;
+  AnalogWDGConfig.LowThreshold = 100;
   if (HAL_ADC_AnalogWDGConfig(&hadc, &AnalogWDGConfig) != HAL_OK)
   {
     Error_Handler();
